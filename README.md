@@ -1,1 +1,2 @@
-"# PictureQ-java" 
+Picture Quest java project
+
