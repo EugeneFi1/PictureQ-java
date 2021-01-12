@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 @PropertySource("classpath:queries/postgres.properties")
 public class QuestDaoImpl implements QuestDao {
     private final JdbcTemplate jdbcTemplate;
-    private QuestMapper questMapper;
+    private final QuestMapper questMapper;
 
     @Value("${create.quest}")
     private String CREATE_QUEST;
