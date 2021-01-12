@@ -23,6 +23,9 @@ public class QuestDaoImpl implements QuestDao {
     @Value("${create.quest}")
     private String CREATE_QUEST;
 
+    @Value("${delete.quest}")
+    private String DELETE_QUEST;
+
     public QuestDaoImpl(JdbcTemplate jdbcTemplate, QuestMapper questMapper) {
         this.jdbcTemplate = jdbcTemplate;
         this.questMapper = questMapper;
@@ -43,6 +46,6 @@ public class QuestDaoImpl implements QuestDao {
     @Override
     public void deleteQuest(Long id) {
         log.info("delete quest by id: {}", id);
-        jdbcTemplate.update("delete from quest where id = ?", id);
+        jdbcTemplate.update(DELETE_QUEST, id);
     }
 }
