@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class QuestServiceImpl implements QuestService {
-    QuestDao questDao;
+    private final QuestDao questDao;
 
     public QuestServiceImpl(QuestDao questDao) {
         this.questDao = questDao;
