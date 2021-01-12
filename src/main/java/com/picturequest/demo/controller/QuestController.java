@@ -2,10 +2,9 @@ package com.picturequest.demo.controller;
 
 import com.picturequest.demo.model.Quest;
 import com.picturequest.demo.service.QuestService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/quest")
@@ -20,4 +19,16 @@ public class QuestController {
     public void createQuest(@RequestBody Quest quest) {
         questService.createQuest(quest);
     }
+
+    @GetMapping("/get-all")
+    public List<Quest> getAllQuests() {
+        return questService.getAllQuests();
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteQuest(@PathVariable("id") Long id) {
+        questService.deleteQuest(id);
+    }
+
 }
+
