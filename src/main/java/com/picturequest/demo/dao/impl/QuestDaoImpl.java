@@ -10,7 +10,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -26,6 +25,9 @@ public class QuestDaoImpl implements QuestDao {
     @Value("${delete.quest}")
     private String DELETE_QUEST;
 
+    @Value("${get.all.quests}")
+    private String GET_ALL_QUESTS;
+
     public QuestDaoImpl(JdbcTemplate jdbcTemplate, QuestMapper questMapper) {
         this.jdbcTemplate = jdbcTemplate;
         this.questMapper = questMapper;
@@ -40,7 +42,7 @@ public class QuestDaoImpl implements QuestDao {
 
     @Override
     public List<Quest> getAllQuests() {
-        return jdbcTemplate.queryForStream("select * from quest", questMapper).collect(Collectors.toList());
+        return jdbcTemplate.queryForStream(GET_ALL_QUESTS, questMapper).collect(Collectors.toList());
     }
 
     @Override
