@@ -11,8 +11,8 @@ import java.sql.SQLException;
 public class QuestMapper implements RowMapper<Quest> {
     @Override
     public Quest mapRow(ResultSet resultSet, int i) throws SQLException {
-        return Quest.builder().
-                id(resultSet.getLong(1))
+        return Quest.builder()
+                .id(resultSet.getLong(1))
                 .name(resultSet.getString(2))
                 .description(resultSet.getString(3))
                 .picture(resultSet.getString(4))

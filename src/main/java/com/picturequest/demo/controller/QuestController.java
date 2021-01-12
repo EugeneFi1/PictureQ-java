@@ -9,7 +9,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/quest")
 public class QuestController {
-    QuestService questService;
+    private final QuestService questService;
 
     public QuestController(QuestService questService) {
         this.questService = questService;
