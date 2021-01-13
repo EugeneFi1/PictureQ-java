@@ -22,6 +22,9 @@ public class QuestPageDaoImpl implements QuestPageDao {
     @Value("${update.quest.page}")
     private String UPDATE_QUEST_PAGE;
 
+    @Value("${get.quest.pages}")
+    private String GET_QUEST_PAGES;
+
     public QuestPageDaoImpl(JdbcTemplate jdbcTemplate, QuestPageMapper questPageMapper) {
         this.jdbcTemplate = jdbcTemplate;
         this.questPageMapper = questPageMapper;
@@ -37,7 +40,7 @@ public class QuestPageDaoImpl implements QuestPageDao {
 
     @Override
     public List<QuestPage> getQuestPages(Long questId) {
-        return jdbcTemplate.queryForStream("select * from quest_page where \"questId\"  = ?", questPageMapper,questId)
+        return jdbcTemplate.queryForStream(GET_QUEST_PAGES, questPageMapper,questId)
                 .collect(Collectors.toList());
     }
 }
