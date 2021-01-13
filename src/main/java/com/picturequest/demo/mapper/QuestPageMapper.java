@@ -2,10 +2,12 @@ package com.picturequest.demo.mapper;
 
 import com.picturequest.demo.model.QuestPage;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+@Component
 public class QuestPageMapper implements RowMapper<QuestPage> {
     @Override
     public QuestPage mapRow(ResultSet resultSet, int i) throws SQLException {

@@ -5,6 +5,8 @@ import com.picturequest.demo.model.QuestPage;
 import com.picturequest.demo.service.QuestPageService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class QuestPageServiceImpl implements QuestPageService {
     private final QuestPageDao questPageDao;
@@ -16,5 +18,10 @@ public class QuestPageServiceImpl implements QuestPageService {
     @Override
     public void updateQuestPage(QuestPage questPage) {
         questPageDao.updateQuestPage(questPage);
+    }
+
+    @Override
+    public List<QuestPage> getQuestPages(Long questId) {
+        return questPageDao.getQuestPages(questId);
     }
 }
