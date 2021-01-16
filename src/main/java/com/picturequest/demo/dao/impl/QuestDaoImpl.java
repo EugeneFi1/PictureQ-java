@@ -28,6 +28,9 @@ public class QuestDaoImpl implements QuestDao {
     @Value("${get.all.quests}")
     private String GET_ALL_QUESTS;
 
+    @Value("${update.quest}")
+    private String UPDATE_QUEST;
+
     public QuestDaoImpl(JdbcTemplate jdbcTemplate, QuestMapper questMapper) {
         this.jdbcTemplate = jdbcTemplate;
         this.questMapper = questMapper;
@@ -49,5 +52,15 @@ public class QuestDaoImpl implements QuestDao {
     public void deleteQuest(Long id) {
         log.info("delete quest by id: {}", id);
         jdbcTemplate.update(DELETE_QUEST, id);
+    }
+
+    @Override
+    public void updateQuest(Quest quest) {
+        jdbcTemplate.update(UPDATE_QUEST,
+                quest.getName(),
+                quest.getDescription(), quest.getPicture(),
+                quest.getExplanation(), quest.getReplyStrategy(),
+                quest.getShowStrategy(), quest.getId()
+        );
     }
 }

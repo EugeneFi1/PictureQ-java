@@ -17,4 +17,5 @@ public class QuestPage {
     private String cssOnePicture;
     private String cssAll;
     private String cssText;
+
 }

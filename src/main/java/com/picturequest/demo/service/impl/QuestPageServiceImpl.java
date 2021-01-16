@@ -24,4 +24,14 @@ public class QuestPageServiceImpl implements QuestPageService {
     public List<QuestPage> getQuestPages(Long questId) {
         return questPageDao.getQuestPages(questId);
     }
+
+    @Override
+    public void deleteQuestPage(Long id) {
+        questPageDao.deleteQuestPage(id);
+    }
+
+    @Override
+    public void createQuestPage(QuestPage questPage) {
+        questPageDao.createQuestPage(questPage);
+    }
 }
