@@ -29,4 +29,9 @@ public class QuestServiceImpl implements QuestService {
     public void deleteQuest(Long id) {
         questDao.deleteQuest(id);
     }
+
+    @Override
+    public void updateQuest(Quest quest) {
+        questDao.updateQuest(quest);
+    }
 }

@@ -25,6 +25,12 @@ public class QuestPageDaoImpl implements QuestPageDao {
     @Value("${get.quest.pages}")
     private String GET_QUEST_PAGES;
 
+    @Value("${delete.quest.page}")
+    private String DELETE_QUEST_PAGE;
+
+    @Value("${create.quest.page}")
+    private String CREATE_QUEST_PAGE;
+
     public QuestPageDaoImpl(JdbcTemplate jdbcTemplate, QuestPageMapper questPageMapper) {
         this.jdbcTemplate = jdbcTemplate;
         this.questPageMapper = questPageMapper;
@@ -42,5 +48,22 @@ public class QuestPageDaoImpl implements QuestPageDao {
     public List<QuestPage> getQuestPages(Long questId) {
         return jdbcTemplate.queryForStream(GET_QUEST_PAGES, questPageMapper,questId)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public void deleteQuestPage(Long id) {
+        log.info("delete questPage by id: {}", id);
+        jdbcTemplate.update(DELETE_QUEST_PAGE, id);
+    }
+
+    @Override
+    public void createQuestPage(QuestPage questPage) {
+        log.info("create questPage: {}", questPage);
+        jdbcTemplate.update(CREATE_QUEST_PAGE,
+                questPage.getQuestId(), questPage.getOrder(),  questPage.getTitle(),
+                questPage.getDescriptionTop(), questPage.getDescriptionBottom(),
+                questPage.getExplanation(),  questPage.getCssAllPictures(),
+                questPage.getCssOnePicture(), questPage.getCssAll(),
+                questPage.getCssText());
     }
 }
