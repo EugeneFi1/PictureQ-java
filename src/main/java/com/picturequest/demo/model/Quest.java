@@ -12,6 +12,8 @@ public class Quest {
     private String picture;
     private String explanation;
     private String replyStrategy;
-    private String user;
+    private String userName;
     private Long showStrategy;
+
+
 }

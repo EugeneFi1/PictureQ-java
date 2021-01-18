@@ -18,7 +18,7 @@ public class QuestMapper implements RowMapper<Quest> {
                 .picture(resultSet.getString(4))
                 .explanation(resultSet.getString(5))
                 .replyStrategy(resultSet.getString(6))
-                .user(resultSet.getString(7))
+                .userName(resultSet.getString(7))
                 .showStrategy(resultSet.getLong(8))
                 .build();
     }

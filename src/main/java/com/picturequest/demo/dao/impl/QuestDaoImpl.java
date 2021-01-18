@@ -40,7 +40,7 @@ public class QuestDaoImpl implements QuestDao {
     public void createQuest(Quest quest) {
         log.info("create quest: {}", quest);
         jdbcTemplate.update(CREATE_QUEST, quest.getName(), quest.getDescription(), quest.getPicture(),
-                quest.getExplanation(), quest.getReplyStrategy(), quest.getUser(), quest.getShowStrategy());
+                quest.getExplanation(), quest.getReplyStrategy(), quest.getUserName(), quest.getShowStrategy());
     }
 
     @Override
