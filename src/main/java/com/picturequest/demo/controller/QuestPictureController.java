@@ -1,9 +1,9 @@
 package com.picturequest.demo.controller;
 
-
 import com.picturequest.demo.model.QuestPicture;
 import com.picturequest.demo.service.QuestPictureService;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -21,7 +21,7 @@ public class QuestPictureController {
     }
 
     @GetMapping("get-all/{questionId}")
-    public List<QuestPicture> getQuestPictures (@PathVariable("questionId") Long questionId) {
+    public List<QuestPicture> getQuestPictures(@PathVariable("questionId") Long questionId) {
         return questPictureService.getQuestPictures(questionId);
     }
 
