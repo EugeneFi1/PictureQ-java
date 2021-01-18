@@ -14,7 +14,7 @@ public class QuestPageMapper implements RowMapper<QuestPage> {
         return QuestPage.builder()
                 .id(resultSet.getLong(1))
                 .questId(resultSet.getLong(2))
-                .order(resultSet.getString(3))
+                .orderBy(resultSet.getString(3))
                 .title(resultSet.getString(4))
                 .descriptionTop(resultSet.getString(5))
                 .descriptionBottom(resultSet.getString(6))

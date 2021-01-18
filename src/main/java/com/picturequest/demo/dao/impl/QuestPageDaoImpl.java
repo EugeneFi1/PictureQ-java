@@ -39,7 +39,7 @@ public class QuestPageDaoImpl implements QuestPageDao {
     @Override
     public void updateQuestPage(QuestPage questPage) {
         log.info("update quest page: {}", questPage);
-        jdbcTemplate.update(UPDATE_QUEST_PAGE, questPage.getOrder(), questPage.getTitle(), questPage.getDescriptionTop(),
+        jdbcTemplate.update(UPDATE_QUEST_PAGE, questPage.getOrderBy(), questPage.getTitle(), questPage.getDescriptionTop(),
                 questPage.getDescriptionBottom(), questPage.getExplanation(), questPage.getCssAllPictures(),
                 questPage.getCssOnePicture(), questPage.getCssAll(), questPage.getCssText(), questPage.getId());
     }
@@ -60,7 +60,7 @@ public class QuestPageDaoImpl implements QuestPageDao {
     public void createQuestPage(QuestPage questPage) {
         log.info("create questPage: {}", questPage);
         jdbcTemplate.update(CREATE_QUEST_PAGE,
-                questPage.getQuestId(), questPage.getOrder(),  questPage.getTitle(),
+                questPage.getQuestId(), questPage.getOrderBy(),  questPage.getTitle(),
                 questPage.getDescriptionTop(), questPage.getDescriptionBottom(),
                 questPage.getExplanation(),  questPage.getCssAllPictures(),
                 questPage.getCssOnePicture(), questPage.getCssAll(),

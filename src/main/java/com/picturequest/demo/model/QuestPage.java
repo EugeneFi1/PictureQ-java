@@ -8,7 +8,7 @@ import lombok.Data;
 public class QuestPage {
     private Long id;
     private Long questId;
-    private String order;
+    private String orderBy;
     private String title;
     private String descriptionTop;
     private String descriptionBottom;
