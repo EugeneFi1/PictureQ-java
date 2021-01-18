@@ -1,7 +1,6 @@
 package com.picturequest.demo.controller;
 
 import com.picturequest.demo.model.Quest;
-import com.picturequest.demo.model.QuestPage;
 import com.picturequest.demo.service.QuestService;
 import org.springframework.web.bind.annotation.*;
 
