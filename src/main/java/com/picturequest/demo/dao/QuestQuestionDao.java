@@ -1,6 +1,5 @@
 package com.picturequest.demo.dao;
 
-
 import com.picturequest.demo.model.QuestQuestion;
 
 import java.util.List;

@@ -14,8 +14,8 @@ public class QuestAnswerInputController {
     }
 
     @GetMapping("/get/{id}")
-    QuestAnswerInput getQuestAnswerInput(@PathVariable("id") Long questId){
-        return questAnswerInputService.getQuestAnswerInput(questId);
+    QuestAnswerInput getQuestAnswerInput(@PathVariable("id") Long questionId){
+        return questAnswerInputService.getQuestAnswerInput(questionId);
     }
 
     @PostMapping("/create")

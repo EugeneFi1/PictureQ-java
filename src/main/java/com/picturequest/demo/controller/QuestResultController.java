@@ -1,7 +1,4 @@
 package com.picturequest.demo.controller;
-
-
-
 import com.picturequest.demo.model.QuestResult;
 import com.picturequest.demo.service.QuestResultService;
 import org.springframework.web.bind.annotation.*;
@@ -36,7 +33,4 @@ public class QuestResultController {
     public void createQuestResult(@RequestBody QuestResult questResult) {
         questResultService.createQuestResult(questResult);
     }
-
-
-
 }

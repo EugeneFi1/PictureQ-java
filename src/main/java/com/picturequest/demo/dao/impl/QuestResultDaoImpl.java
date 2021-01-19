@@ -1,6 +1,4 @@
 package com.picturequest.demo.dao.impl;
-
-
 import com.picturequest.demo.dao.QuestResultDao;
 import com.picturequest.demo.mapper.QuestResultMapper;
 import com.picturequest.demo.model.QuestResult;
@@ -9,7 +7,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -45,14 +42,12 @@ public class QuestResultDaoImpl implements QuestResultDao {
 
     @Override
     public void deleteQuestResult(Long id) {
-        log.info("delete questResult by id : {}", id);
-        jdbcTemplate.update(DELETE_QUEST_RESULT, id);
+       jdbcTemplate.update(DELETE_QUEST_RESULT, id);
     }
 
     @Override
     public void createQuestResult(QuestResult questResult) {
-        log.info("create questResult: {}", questResult);
-        jdbcTemplate.update(CREATE_QUEST_RESULT,
+       jdbcTemplate.update(CREATE_QUEST_RESULT,
                 questResult.getUserId(), questResult.getQuestId(),
                 questResult.getScore(), questResult.getScorePercent(),
                 questResult.getAnswers());
@@ -61,12 +56,8 @@ public class QuestResultDaoImpl implements QuestResultDao {
 
     @Override
     public void updateQuestResult(QuestResult questResult) {
-        log.info("update questResult: {}", questResult);
         jdbcTemplate.update(UPDATE_QUEST_RESULT,
                 questResult.getScore(), questResult.getScorePercent(),
                 questResult.getAnswers());
     }
-
-
-
 }

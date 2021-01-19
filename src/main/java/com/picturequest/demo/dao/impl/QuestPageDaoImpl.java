@@ -1,5 +1,4 @@
 package com.picturequest.demo.dao.impl;
-
 import com.picturequest.demo.dao.QuestPageDao;
 import com.picturequest.demo.mapper.QuestPageMapper;
 import com.picturequest.demo.model.QuestPage;

@@ -1,6 +1,5 @@
 package com.picturequest.demo.service.impl;
 
-
 import com.picturequest.demo.dao.QuestResultDao;
 import com.picturequest.demo.model.QuestResult;
 import com.picturequest.demo.service.QuestResultService;
