@@ -1,6 +1,5 @@
 package com.picturequest.demo.service.impl;
 
-
 import com.picturequest.demo.dao.QuestQuestionDao;
 
 import com.picturequest.demo.model.QuestQuestion;
@@ -8,7 +7,6 @@ import com.picturequest.demo.service.QuestQuestionService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
 
 @Service
 public class QuestQuestionServiceImpl implements QuestQuestionService{

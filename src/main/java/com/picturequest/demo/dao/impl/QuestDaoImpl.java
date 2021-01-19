@@ -1,5 +1,4 @@
 package com.picturequest.demo.dao.impl;
-
 import com.picturequest.demo.dao.QuestDao;
 import com.picturequest.demo.mapper.QuestMapper;
 import com.picturequest.demo.model.Quest;
@@ -8,7 +7,6 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
