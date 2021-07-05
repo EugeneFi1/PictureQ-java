@@ -1,11 +1,7 @@
 package com.picturequest.demo.controller;
-
-
-
 import com.picturequest.demo.model.QuestQuestion;
 import com.picturequest.demo.service.QuestQuestionService;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -36,6 +32,4 @@ public class QuestQuestionController {
     public void createQuestQuestion(@RequestBody QuestQuestion questQuestion) {
         questQuestionService.createQuestQuestion(questQuestion);
     }
-
-
 }

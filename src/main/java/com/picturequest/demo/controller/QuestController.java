@@ -1,5 +1,4 @@
 package com.picturequest.demo.controller;
-
 import com.picturequest.demo.model.Quest;
 import com.picturequest.demo.service.QuestService;
 import org.springframework.web.bind.annotation.*;
@@ -32,6 +31,5 @@ public class QuestController {
 
     @PutMapping("/update")
     public void updateQuest(@RequestBody Quest quest)  {questService.updateQuest(quest);}
-
 }
 

@@ -14,8 +14,8 @@ public class QuestAnswerInputServiceImpl implements QuestAnswerInputService {
     }
 
     @Override
-    public QuestAnswerInput getQuestAnswerInput(Long questId) {
-        return questAnswerInputDao.getQuestAnswerInput(questId);
+    public QuestAnswerInput getQuestAnswerInput(Long questionId) {
+        return questAnswerInputDao.getQuestAnswerInput(questionId);
     }
 
     @Override

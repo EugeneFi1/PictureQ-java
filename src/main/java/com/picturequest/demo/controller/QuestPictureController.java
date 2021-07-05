@@ -1,5 +1,4 @@
 package com.picturequest.demo.controller;
-
 import com.picturequest.demo.model.QuestPicture;
 import com.picturequest.demo.service.QuestPictureService;
 import org.springframework.web.bind.annotation.*;
@@ -34,6 +33,4 @@ public class QuestPictureController {
     public void createQuestPicture(@RequestBody QuestPicture questPicture) {
         questPictureService.createQuestPicture(questPicture);
     }
-
-
 }
