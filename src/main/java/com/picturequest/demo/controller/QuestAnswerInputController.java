@@ -24,7 +24,7 @@ public class QuestAnswerInputController {
     }
 
     @DeleteMapping("/delete/{id}")
-    void deleteQuestAnswerInput(@PathVariable("id") Long id){
+    void deleteQuestAnswerInput(@PathVariable("id") Long id)    {
         questAnswerInputService.deleteQuestAnswerInput(id);
     }
 
