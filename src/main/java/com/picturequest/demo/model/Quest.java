@@ -14,4 +14,5 @@ public class Quest {
     private String replyStrategy;
     private String userName;
     private Long showStrategy;
+    private Long pageAmount;
 }

@@ -6,12 +6,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/quest")
 public class QuestController {
     private final QuestService questService;
 
     public QuestController(QuestService questService) {
         this.questService = questService;
+    }
+
+    @GetMapping("/get-string")
+    public String getString() {
+        return "Hello world";
     }
 
     @PostMapping("/create")

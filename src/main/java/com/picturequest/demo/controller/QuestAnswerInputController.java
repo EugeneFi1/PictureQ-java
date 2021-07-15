@@ -5,6 +5,7 @@ import com.picturequest.demo.service.QuestAnswerInputService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/quest-answer-input")
 public class QuestAnswerInputController {
     private final QuestAnswerInputService questAnswerInputService;
